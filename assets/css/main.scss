@@ -1,0 +1,39 @@
+@font-face {
+    font-family: dala;
+    src: url(/fonts/DalaMoa/DalaMoa-Light.woff);
+  }
+
+  .page-heading, 
+  .main-heading {
+    font-family: dala;
+    font-size: 3rem;
+    // text-transform: uppercase;
+    color: #4A2619;
+  }
+//   .main-heading {
+//     color: #4A2619;
+//   }
+
+  body, html {
+      height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Dosis', sans-serif !important;
+  }
+  .all-content {
+    flex: 1 0 auto;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  .info-container {
+      margin: 0 auto;
+      padding: 2rem;
+      max-width: 75rem;
+  }
