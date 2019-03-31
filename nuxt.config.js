@@ -13,6 +13,13 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
+    script: [
+      {
+        src:
+          'https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver'
+      },
+      { src: 'https://use.fontawesome.com/releases/v5.3.1/js/all.js' }
+    ],
     link: [
       {
         rel: 'stylesheet',
@@ -34,15 +41,20 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: ['~/plugins/vee-validate'],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma'
+    '@nuxtjs/bulma',
+    '@nuxtjs/style-resources'
   ],
+
+  styleResources: {
+    scss: ['./assets/css/_variables.scss', '@/assets/css/_variables.scss']
+  },
 
   /*
   ** Build configuration
@@ -65,7 +77,10 @@ module.exports = {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
+          options: {
+            fix: true
+          }
         })
       }
     }

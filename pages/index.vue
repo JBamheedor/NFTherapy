@@ -1,92 +1,60 @@
 <template>
   <section class="home">
-    <div class="home__background">
-      <div class="home__heading-container">
-        <h1 class="home__heading main-heading has-text-light">
-          Nashville Forest Therapy
-        </h1>
+    <ImageHero :main-title="pageTitle" :style="{ 'background-image': 'url(' + backgroundImage + ')' }" />
+    <div class="home__content-container">
+      <content-section :section-title="contentSection1.title" :section-text="contentSection1.text" />
+      <column-section />
+      <div class="parallax">
+        <!-- <parallax :section-height="50">
+          <img src="~assets/images/home-trees-light.jpg" alt="Woodland parallax image">
+        </parallax> -->
       </div>
-    </div>
-    <div class="home__container">
-      <div class="home__info info-container">
-        <h1 class="page-heading">Welcome Title</h1>
-        <div class="intro-text">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-          </p>
-        </div>
-      </div>
-      <div class="home__benefits info-container has-background-light">
-        <div class="columns">
-          <div class="column">
-            First column
-          </div>
-          <div class="column">
-            Second column
-          </div>
-          <div class="column">
-            Third column
-          </div>
-          <div class="column">
-            Fourth column
-          </div>
-        </div>
-      </div>
+      <content-section :section-title="contentSection2.title" :section-text="contentSection2.text" />
     </div>
   </section>
 </template>
 
 <script>
-export default {}
-</script>
+import ContentSection from '@/components/ContentSection.vue'
+import ColumnSection from '@/components/ColumnSection.vue'
+import ImageHero from '@/components/ImageHero.vue'
 
-<style scoped lang="scss">
-.home__benefits {
-  margin-bottom: 500px;
-}
-.home {
-  &__container {
-    text-align: center;
-  }
-  &__background {
-    background-image: url('~assets/images/background-trees.jpg');
-    height: 50vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    .home__heading-container {
-      height: 100%;
-      position: relative;
-      text-align: center;
-      color: white;
-      .home__heading {
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        animation: fadein 2s;
-        -moz-animation: fadein 2s; /* Firefox */
-        -webkit-animation: fadein 2s; /* Safari and Chrome */
-        -o-animation: fadein 2s; /* Opera */
+// import Parallax from 'vue-parallaxy'
+
+export default {
+  components: {
+    // Parallax,
+    ContentSection,
+    ColumnSection,
+    ImageHero
+  },
+  data() {
+    return {
+      pageTitle: 'Forest Therapy Nashville',
+      backgroundImage: '/images/wood-path.jpg',
+      contentSection1: {
+        title: 'Welcome',
+        text:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+      },
+      contentSection2: {
+        title: 'More information title',
+        text:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
       }
     }
   }
 }
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 1;
+</script>
+
+<style scoped lang="scss">
+// Parallax config
+.parallax {
+  .Masthead {
+    min-height: 50vh;
+    .Masthead__image {
+      height: 140%;
+    }
   }
 }
 </style>

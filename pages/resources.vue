@@ -1,13 +1,29 @@
 <template>
-  <div class="container">
-    <h1 class="page-heading">
-      Resources page
-    </h1>
-  </div>
+  <section class="about">
+    <ImageHero :main-title="pageTitle" :style="{ 'background-image': 'url(' + backgroundImage + ')' }" />
+    <div class="about__content-container" />
+  </section>
 </template>
 
 <script>
-export default {}
+// import ContentSection from '@/components/ContentSection.vue'
+// import ColumnSection from '@/components/ColumnSection.vue'
+import ImageHero from '@/components/ImageHero.vue'
+
+export default {
+  components: {
+    // ContentSection,
+    // ColumnSection,
+    ImageHero
+  },
+  data() {
+    return {
+      pageTitle: 'Resources Page',
+      backgroundImage: '/images/wood2.jpg'
+    }
+  }
+}
 </script>
-<style scoped>
+
+<style scoped lang="scss">
 </style>

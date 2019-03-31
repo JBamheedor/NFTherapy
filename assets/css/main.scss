@@ -1,39 +1,58 @@
-@font-face {
-    font-family: dala;
-    src: url(/fonts/DalaMoa/DalaMoa-Light.woff);
-  }
+//------------------------------------*\
+//  # General
+//------------------------------------*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  // display: flex;
+  // flex-direction: column;
+  font-family: $body-font;
 
-  .page-heading, 
-  .main-heading {
-    font-family: dala;
-    font-size: 3rem;
-    // text-transform: uppercase;
-    color: #4A2619;
-  }
-//   .main-heading {
-//     color: #4A2619;
-//   }
+}
+// .all-content {
+//   flex: 1 0 auto;
+// }
+//------------------------------------*\
+//  # Structure / Layout
+//------------------------------------*/
+// .info-container {
+//   // margin: 3rem auto;
+//   padding: 5rem 0;
+//   // max-width: 80rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   background-color: white;
+// }
+.max {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 65rem;
+}
+//------------------------------------*\
+//  # Typography
+//------------------------------------*/
+.page-heading, 
+.main-heading {
+  font-family: $heading-font;
+  font-size: 3rem;
+  color: #4A2619;
+}
+h2 {
+  font-family: $heading-font;
+  font-size: 2rem;
+  color: $primary-brown
+}
+p {
+  line-height: 2.5;
+}
 
-  body, html {
-      height: 100%;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Dosis', sans-serif !important;
-  }
-  .all-content {
-    flex: 1 0 auto;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-    margin: 0;
-  }
-  .info-container {
-      margin: 0 auto;
-      padding: 2rem;
-      max-width: 75rem;
-  }
+
