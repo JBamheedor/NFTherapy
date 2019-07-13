@@ -105,28 +105,47 @@ export default {
 
 <style lang="scss" scoped>
 .contact-form-wrapper {
-  margin: 4rem auto;
+  margin: 0 auto 3rem;
   max-width: 35rem;
   padding: 0 6%;
   input,
   .textarea {
-    border-color: $primary-brown;
+    border-radius: 0.2rem;
+    border: 1px solid rgba(80, 118, 110, 0.8);
     font-family: $body-font;
   }
   label,
   button {
-    font-family: $heading-font;
-    font-size: 1.3rem;
-    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    color: #4a2619;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 1;
   }
   .button-field {
     display: flex;
     justify-content: center;
     .send-button {
-      background-color: $primary-green;
-      border-color: $primary-green;
+      height: 3rem;
+      border: 0.1rem solid transparent;
+      box-shadow: 0px 15px 15px rgba(80, 118, 110, 0.1);
+      border-radius: 0.2rem;
+      background: rgba(80, 118, 110, 0.8);
+      color: white;
+      margin-top: 1rem;
+      border: 1px solid rgba(80, 118, 110, 0.8);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      display: inline-block;
+      vertical-align: middle;
+      transition: ease-out 0.25s all;
       &:hover {
-        background-color: $dark-green;
+        background: white;
+        color: #4a2619 !important;
       }
     }
   }

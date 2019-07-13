@@ -2,7 +2,9 @@
   <section class="contact">
     <ImageHero :main-title="pageTitle" :style="{ 'background-image': 'url(' + backgroundImage + ')' }" />
     <div class="contact__content-container">
-      <content-section :section-title="contentSection1.title" :section-text="contentSection1.text" />
+      <content-section :section-title="contentSection1.title">
+        <p>Please reach out to me below:</p>
+      </content-section>
     </div>
     <ContactForm />
   </section>
@@ -10,25 +12,35 @@
 
 <script>
 import ContentSection from '@/components/ContentSection.vue'
-// import ColumnSection from '@/components/ColumnSection.vue'
 import ImageHero from '@/components/ImageHero.vue'
 import ContactForm from '@/components/ContactForm.vue'
 
 export default {
   components: {
     ContentSection,
-    // ColumnSection,
     ImageHero,
     ContactForm
   },
+  head() {
+    return {
+      title: 'Contact | Forest Therapy Nashville',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Contact Forest Therapy Nashville to ask questions or schedule a guided Forest Therapy walk. Forest Therapy walks in Nashville can be accessed through Forest Therapy Nashville.'
+        }
+      ]
+    }
+  },
+  transition: 'fadeOpacity',
   data() {
     return {
       pageTitle: 'Contact Page',
-      backgroundImage: '/images/background-trees.jpg',
+      backgroundImage: '/images/contact-hero.jpg',
       contentSection1: {
-        title: 'Get in touch',
-        text:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        title: 'Get in touch'
       }
     }
   }
