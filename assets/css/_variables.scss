@@ -3,8 +3,11 @@
 //------------------------------------*/
 
 $dark-green: rgb(80,118,110);
-$primary-green: rgba(80,118,110,0.8);
+$primary-green: rgba(80,118,110,0.5);
+$footer-green: rgba(80,118,110,0.8);
+
 $light-green: rgba(80,118,110,0.2);
+$light-green-border: #B3DFB9;
 $primary-brown: #4a2619;
 $light-text: #f5f5f5;
 
@@ -16,6 +19,17 @@ $light-text: #f5f5f5;
     font-family: dala;
     src: url(/fonts/DalaMoa/DalaMoa-Light.woff);
 }
-
-$heading-font: dala;
+$main-heading-font: 'Montserrat', sans-serif;
+$heading-font: 'Montserrat', sans-serif;
 $body-font: 'Dosis', sans-serif !important;
+
+body {
+    font-weight: 300;
+}
+//------------------------------------*\
+//  # Breakpoints
+//------------------------------------*/
+
+$mobileLandscape: 480px;
+$tablet: 768px;
+$desktop: 1024px;

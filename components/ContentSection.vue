@@ -1,13 +1,18 @@
 <template>
   <div class="content">
     <div class="content__container max">
-      <h1 class="content__heading">
-        {{ sectionTitle }}
-      </h1>
-      <div class="content__text">
-        <p>
-          {{ sectionText }}
-        </p>
+      <div class="content__heading">
+        <h1 class="header">
+          {{ sectionTitle }}
+        </h1>
+      </div>
+      <div class="content__wrap">
+        <div v-if="image" class="img__container">
+          <img class="img-section" :src="sectionImage" :class="imageClass" alt="Guide profile picture">
+        </div>
+        <div class="content__text">
+          <slot />
+        </div>
       </div>
     </div>
   </div>
@@ -20,7 +25,19 @@ export default {
       type: String,
       default: ''
     },
-    sectionText: {
+    // sectionText: {
+    //   type: String,
+    //   default: ''
+    // },
+    image: {
+      type: Boolean,
+      default: false
+    },
+    sectionImage: {
+      type: String,
+      default: ''
+    },
+    imageClass: {
       type: String,
       default: ''
     }
@@ -30,16 +47,48 @@ export default {
 
 <style lang="scss" scoped>
 .content {
+  padding: 4rem 0;
   margin-bottom: 0;
+
   .content__container {
-    margin: 4rem auto;
+    margin: 3rem auto;
+
+    margin: 0 auto;
     padding: 0 6%;
-    text-align: center;
     .content__heading {
-      font-family: $heading-font;
-      font-size: 3rem;
-      color: #4a2619;
-      font-weight: 400;
+      min-width: 25%;
+
+      .header {
+        font-family: $heading-font;
+        color: #4a2619;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        font-size: 1.2rem;
+        padding-bottom: 0.5rem;
+        text-transform: uppercase;
+        line-height: 1;
+        border-bottom: 0.1rem solid $primary-green;
+        width: fit-content;
+        margin: 0 auto 1.5rem;
+      }
+    }
+
+    .content__wrap {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+}
+
+@media only screen and (min-width: 1088px) {
+  .content {
+    .content__container {
+      .content__wrap {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+      }
     }
   }
 }

@@ -2,14 +2,17 @@
   <section class="home">
     <ImageHero :main-title="pageTitle" :style="{ 'background-image': 'url(' + backgroundImage + ')' }" />
     <div class="home__content-container">
-      <content-section :section-title="contentSection1.title" :section-text="contentSection1.text" />
+      <content-section :section-title="contentSection1.title">
+        <p>Forest Therapy is a guided, sense-based and mindful way to be in nature. Taking place in a small area with a Forest Therapy Guide, crafted invitations offer ways to interact with natural beings that make space for healing of mind, body, and spirit in a simple yet profound way. Based on the Japanese practice of “Shinrinyoku,” or “forest bathing,” we “bathe” in not only immune-boosting chemical compounds of nature but also in the feeling of being present and connected. Nashvillians are increasingly fast-paced, disconnected, anxious, and depressed. Forest Therapy Nashville, through this forest therapy practice, invites a way to start healing ourselves and our city.</p>
+      </content-section>
       <column-section />
-      <div class="parallax">
-        <!-- <parallax :section-height="50">
-          <img src="~assets/images/home-trees-light.jpg" alt="Woodland parallax image">
-        </parallax> -->
-      </div>
-      <content-section :section-title="contentSection2.title" :section-text="contentSection2.text" />
+      <content-section :section-title="contentSection2.title">
+        <p>
+          <a href="https://www.natureandforesttherapy.org/">ANFT</a> certified guides study and learn a particular practice, designed to help you stay embodied and to open the doors for connection with nature, yourself, and others. “The forest is the therapist, the guide opens the doors,” we say. Georgia Bromehead is an ANFT guide in-practicum (Cert. date: 10/2019), a Nashville native, and a nature and human enthusiast. Working in a pharmacy for the past few years, she has witnessed first-hand the epidemic of anxiety, depression, fatigue, and other health issues in Nashvillians. She hopes she can open the door to the opportunity to reconnect with ourselves, others, and the “more than human” world.
+        </p>
+      </content-section>
+      <instagram-feed />
+      <cta-button />
     </div>
   </section>
 </template>
@@ -18,29 +21,28 @@
 import ContentSection from '@/components/ContentSection.vue'
 import ColumnSection from '@/components/ColumnSection.vue'
 import ImageHero from '@/components/ImageHero.vue'
-
-// import Parallax from 'vue-parallaxy'
+import CtaButton from '@/components/CtaButton.vue'
+import InstagramFeed from '@/components/InstagramFeed.vue'
 
 export default {
   components: {
-    // Parallax,
     ContentSection,
     ColumnSection,
-    ImageHero
+    ImageHero,
+    CtaButton,
+    InstagramFeed
   },
+  transition: 'fadeOpacity',
   data() {
     return {
       pageTitle: 'Forest Therapy Nashville',
       backgroundImage: '/images/wood-path.jpg',
+      anft: 'https://www.natureandforesttherapy.org/',
       contentSection1: {
-        title: 'Welcome',
-        text:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+        title: 'Welcome'
       },
       contentSection2: {
-        title: 'More information title',
-        text:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident'
+        title: 'Your Guide'
       }
     }
   }
@@ -48,13 +50,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-// Parallax config
-.parallax {
-  .Masthead {
-    min-height: 50vh;
-    .Masthead__image {
-      height: 140%;
-    }
-  }
-}
 </style>

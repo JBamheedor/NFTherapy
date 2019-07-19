@@ -2,60 +2,78 @@
   <div class="infoColumns">
     <div class="infoColumns__container max">
       <div class="columns">
-        <div class="column">
-          <h2 class="column__header">
-            Benefit 1
-          </h2>
-          <p class="column__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-        <div class="column">
-          <h2 class="column__header">
-            Benefit 2
-          </h2>
-          <p class="column__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-        <div class="column">
-          <h2 class="column__header">
-            Benefit 3
-          </h2>
-          <p class="column__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
+        <info-column :link="col1.link" :col-header="col1.title" :col-body="col1.body">
+          <template v-slot:icon>
+            <i class="fas fa-seedling" />
+          </template>
+        </info-column>
+        <info-column :link="col2.link" :col-header="col2.title" :col-body="col2.body">
+          <template v-slot:icon>
+            <i class="fas fa-walking" />
+          </template>
+        </info-column>
+        <info-column :link="col3.link" :col-header="col3.title" :col-body="col3.body">
+          <template v-slot:icon>
+            <i class="fas fa-plus" />
+          </template>
+        </info-column>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import InfoColumn from '@/components/InfoColumn.vue'
+
+export default {
+  components: {
+    InfoColumn
+  },
+  data() {
+    return {
+      col1: {
+        title: 'Resources',
+        body:
+          'Studies show a reduction in cortisol, blood pressure, and even experiencing “Attention Restoration” after forest bathing.',
+        link: '/resources'
+      },
+      col2: {
+        title: 'Upcoming Walks',
+        body: 'Next walk scheduled soon.',
+        link: '/walks'
+      },
+      col3: {
+        title: 'About',
+        body: 'Meet your guide and read some frequently asked questions.',
+        link: '/about'
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
 .infoColumns {
-  background-color: $light-green;
+  background: $light-green;
   overflow: hidden;
-  margin: 0 auto;
-  padding: 0 4rem;
-  &__container {
-    margin: 2rem auto;
-  }
+  margin: 0 auto 2rem;
+  padding: 2rem 6% 0;
+
   .columns {
     margin: 0;
-    text-align: center;
-    .column {
-      padding: 2rem;
-      &__header {
-        font-size: 1.75rem;
-      }
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
+    padding-bottom: 2rem;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid $light-green;
+    transform: translate(-50%, 0%);
   }
 }
 </style>
