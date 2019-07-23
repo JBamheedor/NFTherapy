@@ -32,7 +32,13 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Page 1 description'
+          content:
+            'Georgia Copeland Bromehead is a trained guide with the Association of Nature and Forest Therapy and leads Forest Therapy nature walks for groups and individuals in the Nashville area landscape. A Forest Therapy guide is trained in specific invitations and sequences that allow for deeper connection to the natural world. Forest Therapy walks are designed to help drop us into our senses and out of our busy minds. All ANFT Forest Therapy walks conclude with a small tea ceremony.'
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.profilePic
         }
       ]
     }

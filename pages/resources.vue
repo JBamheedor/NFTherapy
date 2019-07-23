@@ -26,6 +26,11 @@ export default {
           name: 'description',
           content:
             'Forest Therapy research is increasing in quantity all the time. Begun mostly in Japan and Korea, many studies have been conducted surrounding spending time in nature and our health and well-being. Books on Forest Therapy, nature connection, and studies on nature and attention span, are referenced here.'
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.backgroundImage
         }
       ]
     }
