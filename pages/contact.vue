@@ -30,6 +30,11 @@ export default {
           name: 'description',
           content:
             'Contact Forest Therapy Nashville to ask questions or schedule a guided Forest Therapy walk. Forest Therapy walks in Nashville can be accessed through Forest Therapy Nashville.'
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.backgroundImage
         }
       ]
     }
