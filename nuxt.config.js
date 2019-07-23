@@ -20,6 +20,11 @@ module.exports = {
       {
         name: 'google-site-verification',
         content: 'y7swFzuMxC-apltScpRf1WZ61YpTJNw2zSHvHHjg8e0'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'process.env.baseUrl' + '@/static/images/wood-path.jpg'
       }
     ],
     link: [
@@ -31,11 +36,12 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          // 'https://fonts.googleapis.com/css?family=Dosis:200,300,400,500|Libre+Franklin&display=swap'
-          // 'https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500&display=swap'
           'https://fonts.googleapis.com/css?family=Dosis:300|Montserrat:300,300i,400,400i,500&display=swap'
       }
     ],
+    env: {
+      baseUrl: process.env.baseUrl || 'http://localhost:3000'
+    },
     script: [
       {
         src:
@@ -58,31 +64,31 @@ module.exports = {
       }
 
       const findEl = async (hash, x) => {
-        return document.querySelector(hash) ||
+        return (
+          document.querySelector(hash) ||
           new Promise((resolve, reject) => {
             if (x > 50) {
               return resolve()
             }
-            setTimeout(() => { resolve(findEl(hash, ++x || 1)) }, 100)
+            setTimeout(() => {
+              resolve(findEl(hash, ++x || 1))
+            }, 100)
           })
+        )
       }
 
       if (to.hash) {
         let el = await findEl(to.hash)
         if ('scrollBehavior' in document.documentElement.style) {
-          console.log(1)
-          console.log('22', el.offsetTop)
           return window.scrollTo({
             // Adding additional space here to allow for navbar
             top: el.offsetTop - 48,
             behavior: 'smooth'
           })
         } else {
-          console.log(2)
           return window.scrollTo(0, el.offsetTop)
         }
       }
-      console.log(3)
       return { x: 0, y: 0 }
     }
   },
