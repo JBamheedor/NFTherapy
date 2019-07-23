@@ -38,7 +38,7 @@ export default {
   transition: 'fadeOpacity',
   data() {
     return {
-      pageTitle: 'Resources Page',
+      pageTitle: 'Resources',
       backgroundImage: '/images/resources-wood-hero.jpg',
       contentSection1: {
         title: 'Coming soon'

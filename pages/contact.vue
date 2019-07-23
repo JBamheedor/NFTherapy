@@ -42,7 +42,7 @@ export default {
   transition: 'fadeOpacity',
   data() {
     return {
-      pageTitle: 'Contact Page',
+      pageTitle: 'Contact',
       backgroundImage: '/images/contact-hero.jpg',
       contentSection1: {
         title: 'Get in touch'
