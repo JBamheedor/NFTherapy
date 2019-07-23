@@ -28,6 +28,11 @@ export default {
           name: 'description',
           content:
             'Find Forest Therapy walks in Nashville, TN here. Forest Therapy Nashville invites Nashvillians who want to reconnect, boost their immunity, or simply spend dedicated time in nature on Forest Therapy walks.  Forest Therapy Nashville hosts walks for groups and individuals.'
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.backgroundImage
         }
       ]
     }
