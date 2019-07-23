@@ -19,7 +19,6 @@
 import ContentSection from '@/components/ContentSection.vue'
 import ImageHero from '@/components/ImageHero.vue'
 import FAQSection from '@/components/FAQSection.vue'
-console.log('this', this)
 export default {
   components: {
     ContentSection,
