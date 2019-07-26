@@ -1,14 +1,15 @@
 <template>
   <section class="about">
+    <Hero />
     <ImageHero :main-title="pageTitle" :style="{ 'background-image': 'url(' + backgroundImage + ')' }" />
     <div class="about__content-container">
       <content-section
         id="meet-your-guide"
-        :section-title="contentSection1.title"
+        :section-title="title"
         :image="true"
         :section-image="profilePic"
       >
-        <p>While teaching English in Japan, I had surprise and admiration for the kindergarten I taught in. Nature was part of every day there, windows open, shoes off, animals being brought in to be studied. While I taught, I could look out the big open windows and only see the bottoms of giant cedar trees, close and above us on the hillside. I started researching forest-based preschools and stumbled upon the ANFT website. A new way to connect with nature for all ages, not just kids? I was very intrigued. Moving back to the States I began marketing and natural supplement guidance at a local pharmacy. I heard patients’ stories about anxiety, depression, and fatigue again and again. “This is just not me,” they’d say. It was clearer than ever to me that reconnecting with the healing power of nature, with ourselves, and with others would serve not only us but our community and the world as a whole. I hope to facilitate the opportunity to a remembrance of the roots of ourselves and the world around us.</p>
+        <p>{{ Content }}</p>
       </content-section>
       <FAQSection id="faqs" />
     </div>
@@ -19,11 +20,50 @@
 import ContentSection from '@/components/ContentSection.vue'
 import ImageHero from '@/components/ImageHero.vue'
 import FAQSection from '@/components/FAQSection.vue'
+import Hero from '@/components/Hero.vue'
+
 export default {
   components: {
     ContentSection,
     ImageHero,
-    FAQSection
+    FAQSection,
+    Hero
+  },
+  data() {
+    return {
+      sectionClass: 'about',
+      profilePic: '/images/georgia-profile.jpg',
+      pageTitle: 'About',
+      backgroundImage: '/images/about-hero.jpg'
+      // contentSection1: {
+      //   // title: 'About Georgia'
+      // }
+    }
+  },
+  // TODO: Update prod / dev check
+  asyncData(context) {
+    // Check if we are in the editor mode
+    const version =
+      context.query._storyblok || context.isDev ? 'draft' : 'published'
+
+    // Load the JSON from the API
+    return context.app.$storyapi
+      .get('cdn/stories/about', {
+        version: version
+      })
+      .then(res => {
+        console.log(res.data.story.content.body[0].Title)
+        return {
+          title: res.data.story.content.body[0].Title,
+          Content: res.data.story.content.body[0].Content
+        }
+      })
+      .catch(res => {
+        context.error({
+          statusCode: res.response.status,
+          message: res.response.data
+        })
+      })
   },
   head() {
     return {
@@ -43,18 +83,7 @@ export default {
       ]
     }
   },
-  transition: 'fadeOpacity',
-  data() {
-    return {
-      sectionClass: 'about',
-      profilePic: '/images/georgia-profile.jpg',
-      pageTitle: 'About',
-      backgroundImage: '/images/about-hero.jpg',
-      contentSection1: {
-        title: 'About Georgia'
-      }
-    }
-  }
+  transition: 'fadeOpacity'
 }
 </script>
 // Style not scoped

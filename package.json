@@ -18,6 +18,7 @@
     "animate.css": "^3.7.2",
     "cross-env": "^5.2.0",
     "nuxt": "^2.8.1",
+    "storyblok-nuxt": "^1.0.1",
     "vee-validate": "^2.2.13",
     "vue-bulma-accordion": "^0.4.8",
     "vue-scrollto": "^2.15.0"

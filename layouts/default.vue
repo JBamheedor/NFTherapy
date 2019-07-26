@@ -1,18 +1,18 @@
 <template>
   <div class="all-content">
-    <page-navigation />
+    <TheHeader />
     <nuxt />
     <page-footer />
   </div>
 </template>
 
 <script>
-import PageNavigation from '@/components/PageNavigation.vue'
+import TheHeader from '@/components/TheHeader.vue'
 import PageFooter from '@/components/PageFooter.vue'
 
 export default {
   components: {
-    PageNavigation,
+    TheHeader,
     PageFooter
   },
   head() {
