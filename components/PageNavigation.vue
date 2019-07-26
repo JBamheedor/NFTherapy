@@ -8,11 +8,11 @@
             <span class="home-text">Home</span>
           </nuxt-link>
         </div>
-      
+
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
           <span aria-hidden="true" />
           <span aria-hidden="true" />
-          <span aria-hidden="true" />        
+          <span aria-hidden="true" />
         </a>
       </div>
       <div id="navbarMain" class="navbar-menu">
@@ -189,6 +189,7 @@ export default {
 
   //General nav item styling and effect
   .navbar-item {
+    background: transparent;
     color: white;
     font-family: $heading-font;
     font-size: 1rem;
