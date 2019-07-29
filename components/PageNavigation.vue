@@ -235,6 +235,14 @@ export default {
     }
   }
 
+  .active-link {
+    background: transparent;
+  }
+
+  .nuxt-link-exact-active {
+    background: transparent;
+  }
+
   // Inner nav menu
   .navbar-menu {
     justify-content: space-between;
