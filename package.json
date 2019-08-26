@@ -11,7 +11,7 @@
     "generate": "nuxt generate",
     "precommit": "npm run lint",
     "start": "nuxt start",
-    "forestry-preview": "nuxt -p 8080 -H 0.0.0.0"
+    "forestry:preview": "nuxt -p 8080 -H 0.0.0.0"
   },
   "dependencies": {
     "@neneos/nuxt-animate.css": "0.0.1",
