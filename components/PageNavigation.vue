@@ -17,6 +17,11 @@
       </div>
       <div id="navbarMain" class="navbar-menu">
         <ul class="menu-wrapper">
+          <li class="navbar-list home">
+            <nuxt-link to="/" class="navbar-item -walks">
+              Home
+            </nuxt-link>
+          </li>
           <li class="sub-menu-parent" tab-index="0">
             <span class="sub-menu-title">About</span>
             <nuxt-link to="/about" class="navbar-item -about">
@@ -344,6 +349,10 @@ export default {
       .navbar-list {
         display: flex;
         align-items: center;
+      }
+
+      .home {
+        display: none;
       }
 
       .navbar-item {

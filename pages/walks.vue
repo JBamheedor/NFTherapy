@@ -4,9 +4,37 @@
     <div class="walks__content-container" />
     <content-section :section-title="contentSection1.title">
       <p>
-        I'll be updating this section with my favorite spots and local areas to explore. I'll also post all my upcoming events, stay tuned.
+        My next walk as part of International Forest Bathing Day will take place at Beaman Park, Creekside Trailhead, Ashland City, TN 37015 Saturday, September 7, 2019. More information and the Eventbrite booking page can be found below:
       </p>
     </content-section>
+    <div class="event">
+      <div class="button__container max">
+        <noscript>
+          <a href="https://www.eventbrite.com/e/forest-therapy-walk-for-international-forest-bathing-day-tickets-70291332267" rel="noopener noreferrer" target="_blank">
+          </a>
+        </noscript>
+        <button id="eventbrite-widget-modal-trigger-70291332267" type="button" class="button connect">
+          More Info
+        </button>
+        <noscript><a>Buy Tickets on Eventbrite</a></noscript>
+
+        <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js" />
+
+        <script type="text/javascript">
+          var exampleCallback = function() {
+          console.log('Order complete!');
+          };
+
+          window.EBWidgets.createWidget({
+          widgetType: 'checkout',
+          eventId: '70291332267',
+          modal: true,
+          modalTriggerElementId: 'eventbrite-widget-modal-trigger-70291332267',
+          onOrderComplete: exampleCallback
+          });
+        </script>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -43,12 +71,15 @@ export default {
       pageTitle: 'Walks',
       backgroundImage: '/images/women-walk.jpg',
       contentSection1: {
-        title: 'Coming soon'
+        title: 'Upcoming walks'
       }
     }
   }
 }
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
+.button__container {
+  margin-top: 0;
+}
 </style>
