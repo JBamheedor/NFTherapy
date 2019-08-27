@@ -15,6 +15,7 @@
       Books
     </h2>
     <div class="bookList max">
+      <p>A few of many books of interest:</p>
       <ul>
         <li class="bookList__item">
           <i class="fas fa-book book" />
