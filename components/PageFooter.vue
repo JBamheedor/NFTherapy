@@ -4,7 +4,7 @@
     <div class="footer__container max">
       <div class="contact">
         <address>
-          <a class="email footer-navbar-item" href="mailto:contact@nashvilleforesttherapy.com">contact@nashvilleforesttherapy.com</a>
+          <a class="email footer-navbar-item" href="mailto:contact@foresttherapynashville.com">connect@foresttherapynashville.com</a>
           <span class="divider">|</span>
           <a class="phone footer-navbar-item" href="tel:1-615-477-4294">+1 (615) 477 4294</a>
         </address>
