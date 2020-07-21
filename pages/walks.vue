@@ -4,12 +4,12 @@
     <div class="walks__content-container" />
     <content-section :section-title="contentSection1.title">
       <p>
-        My next walk as part of International Forest Bathing Day will take place at Beaman Park, Creekside Trailhead, Ashland City, TN 37015 Saturday, September 7, 2019. More information and the Eventbrite booking page can be found below:
+        My next series of walks will take place at <a href="https://cheekwood.org/forest-bathing/" target="_blank">Cheekwood Estate & Gardens</a> each Wednesday throughout August. We will be offering a gentle sensory walk on the newly renovated Carell Trail. To register please click below:
       </p>
     </content-section>
     <div class="event">
       <div class="button__container max">
-        <a class="button connect" href="https://www.eventbrite.com/e/forest-therapy-walk-for-international-forest-bathing-day-tickets-70291332267?ref=elink" target="_blank">Walk Info</a>
+        <a class="button connect" href="https://cheekwood.org/register-for-forest-bathing/" target="_blank">Walk Info</a>
       </div>
     </div>
   </section>
