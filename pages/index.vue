@@ -41,7 +41,7 @@ export default {
       pageTitle: 'Forest Therapy Nashville',
       backgroundImage: '/images/wood-path.jpg',
       anft: 'https://www.natureandforesttherapy.org/',
-      videoSrc: 'https://www.youtube.com/embed/wixyvQMCFj4',
+      videoSrc: 'https://www.youtube.com/embed/Bw5RA90qi0k',
       contentSection1: {
         title: 'Welcome'
       },

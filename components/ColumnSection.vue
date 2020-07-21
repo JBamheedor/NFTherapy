@@ -40,7 +40,7 @@ export default {
       col2: {
         title: 'Upcoming Walks',
         body:
-          'International Forest Bathing Day Beaman Park, Creekside Trailhead, Ashland City, TN 37015 Saturday September 7, 2019',
+          'Forest Bathing for Beginners @Cheekwood every Wednesday in August 9:30 - 10:30 am',
         link: '/walks'
       },
       col3: {
