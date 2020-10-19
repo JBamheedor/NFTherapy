@@ -11,11 +11,6 @@
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     />
-    <div class="caption">
-      <p class="caption__copy">
-        A little video peek at a Forest Therapy experience with ANFT guide in Illinois. Forest Therapy walks are happening all over the world, in all seasons.
-      </p>
-    </div>
   </div>
 </template>
 
