@@ -4,10 +4,10 @@
     <div class="walks__content-container" />
     <content-section :section-title="contentSection1.title">
       <p>
-        My next series of walks will take place at <a href="https://cheekwood.org/forest-bathing/" target="_blank">Cheekwood Estate & Gardens</a> each Wednesday throughout August. We will be offering a gentle sensory walk on the newly renovated Carell Trail. - SOLD OUT
+        I'm hosting an Intro to Forest Bathing series at <a href="https://cheekwood.org/forest-bathing/" target="_blank">Cheekwood Estate & Gardens</a> each Wednesday throughout October. We will be offering a gentle sensory walk on the newly renovated Carell Trail.
       </p>
       <p>
-        I will also be running the following walks throughout fall 2020:
+        Official Forest Therapy Nashville walks are also occuring throughout Fall 2020. Click below to sign up:
       </p>
       <ul>
         <li>
@@ -17,17 +17,17 @@
         </li>
         <li>
           <a target="_blank" href="https://www.eventbrite.com/e/forest-therapy-walk-october-16-2020-ticket-required-tickets-115417919103">
-            October 16: Beaman Park
+            October 16: Nashville private residence
           </a>
         </li>
         <li>
           <a target="_blank" href="https://www.eventbrite.com/e/forest-therapy-walk-november-7-2020-ticket-required-tickets-115418693419">
-            November 7: Beaman Park
+            November 7: Nashville private residence
           </a>
         </li>
         <li>
           <a target="_blank" href="https://www.eventbrite.com/e/forest-therapy-walk-december-5-2020-ticket-required-tickets-115419036445">
-            December 5: Beaman Park
+            December 5: Nashville private residence
           </a>
         </li>
       </ul>
