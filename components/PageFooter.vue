@@ -4,7 +4,7 @@
     <div class="footer__container max">
       <div class="contact">
         <address>
-          <a class="email footer-navbar-item" href="mailto:contact@foresttherapynashville.com">connect@foresttherapynashville.com</a>
+          <a class="email footer-navbar-item" href="mailto:connect@foresttherapynashville.com">connect@foresttherapynashville.com</a>
         </address>
       </div>
       <div class="footer__socials">
